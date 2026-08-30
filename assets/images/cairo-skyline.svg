@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <path d="M0 72H280" stroke="#001A3D" stroke-width="1" opacity="0.25"/>
+  <path d="M18 72L38 42L58 72" stroke="#001A3D" stroke-width="1.5" stroke-linejoin="round" opacity="0.2"/>
+  <path d="M48 72L68 32L88 72" stroke="#001A3D" stroke-width="1.5" stroke-linejoin="round" opacity="0.2"/>
+  <path d="M78 72L98 48L118 72" stroke="#001A3D" stroke-width="1.5" stroke-linejoin="round" opacity="0.2"/>
+  <rect x="168" y="18" width="8" height="54" rx="1" stroke="#001A3D" stroke-width="1.5" opacity="0.2"/>
+  <path d="M164 24H180V28H164V24Z" stroke="#001A3D" stroke-width="1.2" opacity="0.2"/>
+  <path d="M162 34H182V38H162V34Z" stroke="#001A3D" stroke-width="1.2" opacity="0.2"/>
+  <circle cx="172" cy="14" r="3" stroke="#001A3D" stroke-width="1.2" opacity="0.2"/>
+  <path d="M200 72V52C200 46 204 42 210 42H218C224 42 228 46 228 52V72" stroke="#001A3D" stroke-width="1.5" opacity="0.18"/>
+  <path d="M238 72V58C238 54 241 51 245 51H251C255 51 258 54 258 58V72" stroke="#001A3D" stroke-width="1.5" opacity="0.18"/>
+  <path d="M130 72V60H150V72" stroke="#001A3D" stroke-width="1.3" opacity="0.16"/>
+  <path d="M138 60V48H142V60" stroke="#001A3D" stroke-width="1.2" opacity="0.16"/>
+</svg>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News &amp; Announcements - ESCi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+
+  <!-- Header (simplified) -->
+  <header class="site-header">
+    <div class="container-fluid px-esci">
+      <div class="header-inner">
+        <a href="index.html" class="header-logo">
+          <img src="assets/images/esci-logo.png" alt="ESCi" class="header-logo-img">
+        </a>
+        <nav class="header-nav" role="navigation">
+          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+          <div class="nav-item"><a href="#" class="nav-link">About ESCi</a></div>
+          <div class="nav-item"><a href="#" class="nav-link">Events</a></div>
+          <div class="nav-item"><a href="blog.html" class="nav-link active">News</a></div>
+          <div class="nav-item"><a href="#" class="nav-link">Contact</a></div>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-search" id="btnSearch" aria-label="Search"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="btn-login">Login</a>
+          <a href="#" class="btn-join">Join ESCi</a>
+          <button class="btn-hamburger" id="btnHamburger" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <img src="assets/images/esci-logo.png" alt="ESCi" class="header-logo-img">
+      <button class="btn-close-nav" id="btnCloseNav">&times;</button>
+    </div>
+    <div class="mobile-nav-body">
+      <div class="mobile-accordion-item"><a href="index.html" class="mobile-accordion-trigger" style="text-decoration:none;">Home</a></div>
+      <div class="mobile-accordion-item"><a href="blog.html" class="mobile-accordion-trigger" style="text-decoration:none;">News</a></div>
+      <div class="mobile-accordion-item"><a href="login.html" class="mobile-accordion-trigger" style="text-decoration:none;">Login</a></div>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="#" class="btn-join-full">Join ESCi</a>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="btn-close-search" id="btnCloseSearch">&times;</button>
+    <div class="search-box">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" placeholder="Search articles..." aria-label="Search">
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container-fluid px-esci">
+      <div class="breadcrumb-esci">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">News</span>
+      </div>
+      <h1>News &amp; Announcements</h1>
+      <p>Stay informed with the latest updates from the Egyptian Society of Cardiovascular Intervention.</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="blog-section">
+    <div class="container-fluid px-esci">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/news-1.jpg" alt="PCI Guidelines">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">Guidelines</span>
+                  <span><i class="bi bi-calendar3"></i> March 15, 2025</span>
+                </div>
+                <h3><a href="#">ESCi Publishes Updated PCI Guidelines for 2025</a></h3>
+                <p>The Egyptian Society of Cardiovascular Intervention has released comprehensive updated guidelines for percutaneous coronary intervention, reflecting the latest evidence-based practices.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/news-2.jpg" alt="Research Registry">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">Research</span>
+                  <span><i class="bi bi-calendar3"></i> March 10, 2025</span>
+                </div>
+                <h3><a href="#">New Research Registry Launched for Egyptian Cardiologists</a></h3>
+                <p>ESCi announces the launch of a national interventional cardiology research registry to facilitate collaborative studies and data sharing among member physicians.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/news-3.jpg" alt="Strategic Plan">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">Announcement</span>
+                  <span><i class="bi bi-calendar3"></i> March 5, 2025</span>
+                </div>
+                <h3><a href="#">Board of Directors Announces Strategic Plan 2025–2030</a></h3>
+                <p>The ESCi Board unveils an ambitious five-year strategic plan focused on education, research, international collaboration, and digital transformation of member services.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/conference-bg.jpg" alt="Conference">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">Events</span>
+                  <span><i class="bi bi-calendar3"></i> February 28, 2025</span>
+                </div>
+                <h3><a href="#">Early Bird Registration Open for Annual Conference 2025</a></h3>
+                <p>Register now for the ESCi Annual Conference 2025 in Cairo. Early bird rates available until April 30, 2025. World-renowned faculty confirmed.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/hero-heart.png" alt="CME">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">Education</span>
+                  <span><i class="bi bi-calendar3"></i> February 20, 2025</span>
+                </div>
+                <h3><a href="#">New CME Courses Available on the Member Portal</a></h3>
+                <p>Five new accredited CME courses covering structural heart interventions, complex PCI, and peripheral vascular interventions are now available for members.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/news-2.jpg" alt="Partnership">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="category">International</span>
+                  <span><i class="bi bi-calendar3"></i> February 15, 2025</span>
+                </div>
+                <h3><a href="#">ESCi Signs Partnership Agreement with European Society of Cardiology</a></h3>
+                <p>A landmark partnership agreement between ESCi and the European Society of Cardiology will enable joint scientific programs and faculty exchange.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="blog-sidebar">
+            <div class="sidebar-widget sidebar-search">
+              <h4>Search</h4>
+              <input type="text" placeholder="Search articles...">
+            </div>
+            <div class="sidebar-widget sidebar-categories">
+              <h4>Categories</h4>
+              <ul>
+                <li><a href="#">Guidelines <span>8</span></a></li>
+                <li><a href="#">Research <span>12</span></a></li>
+                <li><a href="#">Events <span>15</span></a></li>
+                <li><a href="#">Education <span>10</span></a></li>
+                <li><a href="#">Announcements <span>6</span></a></li>
+                <li><a href="#">International <span>4</span></a></li>
+              </ul>
+            </div>
+            <div class="sidebar-widget">
+              <h4>Newsletter</h4>
+              <p style="font-size:13px; color:var(--slate); margin-bottom:12px;">Get the latest ESCi news delivered to your inbox.</p>
+              <form id="sidebarNewsletter">
+                <input type="email" placeholder="Your email" style="width:100%;padding:10px 16px;border:1.5px solid var(--border);border-radius:var(--radius);font-size:14px;margin-bottom:10px;">
+                <button type="submit" class="btn-esci btn-esci-red" style="width:100%;">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container-fluid px-esci">
+      <div class="footer-bottom" style="border-top:none;">
+        <p>&copy; 2025 Egyptian Society of Cardiovascular Intervention (ESCi). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

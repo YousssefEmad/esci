@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8102E"/>
+      <stop offset="50%" stop-color="#8B1538"/>
+      <stop offset="100%" stop-color="#4A6FA5"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8ECF0"/>
+      <stop offset="50%" stop-color="#B8C4D0"/>
+      <stop offset="100%" stop-color="#7A8FA0"/>
+    </linearGradient>
+  </defs>
+  <!-- Stylized heart / a loop icon -->
+  <path d="M32 6 C22 6 14 14 14 24 C14 34 22 44 32 52 C42 44 50 34 50 24 C50 14 42 6 32 6Z" fill="url(#iconGrad)" opacity="0.15"/>
+  <path d="M32 10 C26 10 20 16 20 24 C20 32 32 46 32 46 C32 46 44 32 44 24 C44 16 38 10 32 10Z" stroke="url(#iconGrad)" stroke-width="2.5" fill="none"/>
+  <path d="M28 22 C28 19 30 17 32 17 C34 17 36 19 36 22 C36 26 32 32 32 32 C32 32 28 26 28 22Z" fill="#C8102E"/>
+  <!-- ESCi text -->
+  <text x="58" y="30" font-family="Montserrat, sans-serif" font-weight="700" font-size="24" fill="#0B1D3A" letter-spacing="-0.5">ESCi</text>
+  <line x1="58" y1="36" x2="270" y2="36" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="58" y="50" font-family="Montserrat, sans-serif" font-weight="500" font-size="7.5" fill="#5B6670" letter-spacing="1.5">EGYPTIAN SOCIETY OF CARDIOVASCULAR INTERVENTION</text>
+  <line x1="58" y1="56" x2="120" y2="56" stroke="#C8102E" stroke-width="1"/>
+  <text x="125" y="56" font-family="Montserrat, sans-serif" font-weight="500" font-size="6.5" fill="#C8102E" letter-spacing="0.5">Advancing Excellence in Cardiovascular Intervention</text>
+  <line x1="268" y1="56" x2="270" y2="56" stroke="#C8102E" stroke-width="1"/>
+</svg>

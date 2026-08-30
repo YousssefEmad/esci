@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ESCi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-header">
+        <img src="../assets/images/logo.svg" alt="ESCi">
+        <p>Administration Panel</p>
+      </div>
+
+      <nav class="admin-nav">
+        <div class="admin-nav-section">Main</div>
+        <a href="index.html" class="admin-nav-link active">
+          <i class="bi bi-grid"></i> Dashboard
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-people"></i> Members
+          <span class="badge-count">24</span>
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-calendar-event"></i> Events
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-newspaper"></i> Blog &amp; News
+        </a>
+
+        <div class="admin-nav-section">Communication</div>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-bell"></i> Notifications
+          <span class="badge-count">3</span>
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-envelope"></i> Email Campaigns
+        </a>
+
+        <div class="admin-nav-section">Content</div>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-journal-medical"></i> Scientific Library
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-file-earmark-text"></i> Guidelines
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-mortarboard"></i> CME Courses
+        </a>
+
+        <div class="admin-nav-section">Settings</div>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-person-gear"></i> User Roles
+        </a>
+        <a href="#" class="admin-nav-link">
+          <i class="bi bi-gear"></i> Settings
+        </a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user-info">
+          <div class="admin-user-avatar">AD</div>
+          <div class="admin-user-details">
+            <h6>Admin User</h6>
+            <span>Super Administrator</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <button class="admin-mobile-toggle" id="adminMobileToggle"><i class="bi bi-list"></i></button>
+          <h2>Dashboard</h2>
+        </div>
+        <div class="admin-topbar-actions">
+          <button class="admin-notif-btn" title="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <a href="../index.html" class="btn-esci btn-esci-outline-navy btn-esci-sm"><i class="bi bi-box-arrow-up-right"></i> View Site</a>
+          <a href="../login.html" class="btn-esci btn-esci-red btn-esci-sm">Logout</a>
+        </div>
+      </div>
+
+      <div class="admin-content">
+        <!-- Stats -->
+        <div class="dash-stats">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon red"><i class="bi bi-people"></i></div>
+            <div class="dash-stat-info">
+              <h3>2,547</h3>
+              <p>Total Members</p>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon navy"><i class="bi bi-person-plus"></i></div>
+            <div class="dash-stat-info">
+              <h3>24</h3>
+              <p>Pending Applications</p>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon green"><i class="bi bi-calendar-check"></i></div>
+            <div class="dash-stat-info">
+              <h3>12</h3>
+              <p>Upcoming Events</p>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon blue"><i class="bi bi-newspaper"></i></div>
+            <div class="dash-stat-info">
+              <h3>86</h3>
+              <p>Published Articles</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-grid-2">
+          <!-- Recent Member Applications -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4>Recent Member Applications</h4>
+              <a href="#" class="link-view-all">View All</a>
+            </div>
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Doctor</th>
+                  <th>Specialty</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Dr. Ahmed Hassan</strong><br><small style="color:var(--slate);">ahassan@hospital.eg</small></td>
+                  <td>Interventional Cardiology</td>
+                  <td>Mar 18, 2025</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td><button class="btn-table-action"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Sara Mohamed</strong><br><small style="color:var(--slate);">smohamed@clinic.eg</small></td>
+                  <td>Structural Heart</td>
+                  <td>Mar 17, 2025</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td><button class="btn-table-action"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Omar Farouk</strong><br><small style="color:var(--slate);">ofarouk@medical.eg</small></td>
+                  <td>Interventional Cardiology</td>
+                  <td>Mar 16, 2025</td>
+                  <td><span class="status-badge active">Approved</span></td>
+                  <td><button class="btn-table-action"><i class="bi bi-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td><strong>Dr. Nour El-Din</strong><br><small style="color:var(--slate);">n.eldin@heart.eg</small></td>
+                  <td>Electrophysiology</td>
+                  <td>Mar 15, 2025</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td><button class="btn-table-action"><i class="bi bi-eye"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Send Notification -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4>Send Notification</h4>
+            </div>
+            <div style="padding:24px;">
+              <form id="notificationForm">
+                <div class="form-group-esci">
+                  <label>Recipients</label>
+                  <select>
+                    <option>All Members</option>
+                    <option>Pending Applications</option>
+                    <option>Event Registrants</option>
+                    <option>Specific Members</option>
+                  </select>
+                </div>
+                <div class="form-group-esci">
+                  <label>Subject</label>
+                  <input type="text" placeholder="Notification subject">
+                </div>
+                <div class="form-group-esci">
+                  <label>Message</label>
+                  <textarea style="width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius);font-size:14px;font-family:'Inter',sans-serif;min-height:100px;outline:none;" placeholder="Write your notification message..."></textarea>
+                </div>
+                <div class="form-check-esci" style="margin-bottom:16px;">
+                  <input type="checkbox" id="sendEmail" checked>
+                  <label for="sendEmail">Also send via email</label>
+                </div>
+                <button type="submit" class="btn-esci btn-esci-red"><i class="bi bi-send"></i> Send Notification</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Blog Posts -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h4>Recent Blog Posts</h4>
+            <a href="#" class="btn-esci btn-esci-red btn-esci-sm"><i class="bi bi-plus"></i> New Post</a>
+          </div>
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ESCi Publishes Updated PCI Guidelines for 2025</td>
+                <td>Guidelines</td>
+                <td>Dr. Admin</td>
+                <td>Mar 15, 2025</td>
+                <td><span class="status-badge active">Published</span></td>
+                <td>
+                  <button class="btn-table-action"><i class="bi bi-pencil"></i></button>
+                  <button class="btn-table-action"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>New Research Registry Launched</td>
+                <td>Research</td>
+                <td>Dr. Admin</td>
+                <td>Mar 10, 2025</td>
+                <td><span class="status-badge active">Published</span></td>
+                <td>
+                  <button class="btn-table-action"><i class="bi bi-pencil"></i></button>
+                  <button class="btn-table-action"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>Annual Conference 2025 — Early Bird Registration</td>
+                <td>Events</td>
+                <td>Dr. Admin</td>
+                <td>Mar 5, 2025</td>
+                <td><span class="status-badge active">Published</span></td>
+                <td>
+                  <button class="btn-table-action"><i class="bi bi-pencil"></i></button>
+                  <button class="btn-table-action"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>Partnership with European Society of Cardiology</td>
+                <td>International</td>
+                <td>Dr. Admin</td>
+                <td>Feb 28, 2025</td>
+                <td><span class="status-badge inactive">Draft</span></td>
+                <td>
+                  <button class="btn-table-action"><i class="bi bi-pencil"></i></button>
+                  <button class="btn-table-action"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" fill="none">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A3A6B" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#0B1D3A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#051024" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="heartBase" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#8B2030"/>
+      <stop offset="40%" stop-color="#5C1520"/>
+      <stop offset="100%" stop-color="#2A0A10"/>
+    </radialGradient>
+    <linearGradient id="arteryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4466"/>
+      <stop offset="50%" stop-color="#E31E24"/>
+      <stop offset="100%" stop-color="#C8102E"/>
+    </linearGradient>
+    <linearGradient id="veinGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4488FF"/>
+      <stop offset="100%" stop-color="#2266CC"/>
+    </linearGradient>
+    <filter id="arteryBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow circle -->
+  <circle cx="260" cy="260" r="220" fill="url(#bgGlow)" opacity="0.6"/>
+  <circle cx="260" cy="260" r="180" fill="none" stroke="rgba(68,136,255,0.15)" stroke-width="1"/>
+  <circle cx="260" cy="260" r="200" fill="none" stroke="rgba(200,16,46,0.08)" stroke-width="1"/>
+
+  <!-- Heart silhouette -->
+  <path d="M260 90 C200 90 160 140 155 195 C150 260 200 340 260 400 C320 340 370 260 365 195 C360 140 320 90 260 90Z" fill="url(#heartBase)" opacity="0.95"/>
+
+  <!-- Heart surface detail -->
+  <path d="M260 110 C215 110 180 150 178 200 C175 250 210 310 260 360 C310 310 345 250 342 200 C340 150 305 110 260 110Z" fill="#3D1520" opacity="0.5"/>
+
+  <!-- Left coronary artery -->
+  <path d="M220 180 C210 170 195 165 185 175 C175 185 180 200 195 210 C210 220 230 215 240 200" stroke="url(#arteryGlow)" stroke-width="4" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+  <path d="M195 210 C185 225 175 240 170 260 C165 280 168 300 180 310" stroke="url(#arteryGlow)" stroke-width="3" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+  <path d="M180 310 C175 325 172 340 175 355" stroke="url(#arteryGlow)" stroke-width="2.5" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+
+  <!-- Right coronary artery -->
+  <path d="M300 175 C315 165 335 170 345 185 C355 200 350 220 335 235 C320 250 300 245 290 230" stroke="url(#arteryGlow)" stroke-width="4" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+  <path d="M335 235 C345 250 355 270 358 290 C360 310 355 330 340 345" stroke="url(#arteryGlow)" stroke-width="3" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+
+  <!-- Aorta -->
+  <path d="M260 95 C255 80 250 65 255 50 C258 42 265 38 270 45 C275 55 270 70 265 85" stroke="url(#arteryGlow)" stroke-width="5" fill="none" filter="url(#arteryBlur)" stroke-linecap="round"/>
+
+  <!-- Blue veins -->
+  <path d="M230 250 C220 265 215 285 220 305 C225 320 240 325 250 315" stroke="url(#veinGlow)" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M290 245 C300 260 305 280 300 300 C295 315 280 320 270 310" stroke="url(#veinGlow)" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Catheter wire entering vessel -->
+  <path d="M380 120 C360 140 340 160 320 180 C300 200 280 210 250 215" stroke="#CCCCCC" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.8"/>
+  <path d="M250 215 C240 218 232 225 228 235" stroke="#CCCCCC" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <!-- Catheter tip glow -->
+  <circle cx="228" cy="235" r="4" fill="#FF4466" filter="url(#softGlow)"/>
+  <circle cx="228" cy="235" r="2" fill="#FFFFFF"/>
+
+  <!-- Glowing nodes / circuit points -->
+  <circle cx="195" cy="210" r="5" fill="#FF4466" filter="url(#softGlow)" opacity="0.9"/>
+  <circle cx="335" cy="235" r="5" fill="#FF4466" filter="url(#softGlow)" opacity="0.9"/>
+  <circle cx="180" cy="310" r="4" fill="#FF6644" filter="url(#softGlow)" opacity="0.7"/>
+  <circle cx="340" cy="345" r="4" fill="#FF6644" filter="url(#softGlow)" opacity="0.7"/>
+  <circle cx="230" cy="250" r="3" fill="#4488FF" filter="url(#softGlow)" opacity="0.6"/>
+  <circle cx="290" cy="245" r="3" fill="#4488FF" filter="url(#softGlow)" opacity="0.6"/>
+
+  <!-- Circuit lines emanating -->
+  <path d="M380 120 L395 105" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+  <path d="M395 105 L410 110" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <path d="M395 105 L400 90" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <circle cx="410" cy="110" r="2" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="400" cy="90" r="2" fill="rgba(255,255,255,0.3)"/>
+</svg>

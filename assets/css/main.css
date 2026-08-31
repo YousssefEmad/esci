@@ -2235,6 +2235,7 @@
     }
 
     .mobile-quick-access {
+      padding-top: 20px;
       display: block;
     }
   }
@@ -2371,8 +2372,8 @@
     }
 
     .stats-bar {
-      margin-top: -28px;
-      margin-bottom: 0;
+      margin-top: 15px;
+      margin-bottom: 25px;
     }
 
     .stats-grid {

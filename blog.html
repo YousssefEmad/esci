@@ -3,63 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News &amp; Announcements - ESCi</title>
+  <meta name="description" content="Egyptian Society of Cardiovascular Intervention - Advancing Excellence in Cardiovascular Intervention">
+  <title>ESCi - Egyptian Society of Cardiovascular Intervention</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/blog.css">
 </head>
 <body>
 
-  <!-- Header (simplified) -->
-  <header class="site-header">
+  <!-- HEADER + MEGA MENU -->
+  <div class="header-mega-wrap" id="headerMegaWrap">
+  <header class="site-header" id="siteHeader">
     <div class="container-fluid px-esci">
       <div class="header-inner">
         <a href="index.html" class="header-logo">
-          <img src="assets/images/esci-logo.png" alt="ESCi" class="header-logo-img">
+          <img src="assets/images/esci-logo.png" alt="ESCi - Egyptian Society of Cardiovascular Intervention" class="header-logo-img">
         </a>
-        <nav class="header-nav" role="navigation">
-          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-          <div class="nav-item"><a href="#" class="nav-link">About ESCi</a></div>
-          <div class="nav-item"><a href="#" class="nav-link">Events</a></div>
-          <div class="nav-item"><a href="blog.html" class="nav-link active">News</a></div>
-          <div class="nav-item"><a href="#" class="nav-link">Contact</a></div>
+
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+          <div class="nav-item has-mega" data-mega="about">
+            <a href="#" class="nav-link">About ESCi
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item has-mega" data-mega="membership">
+            <a href="#" class="nav-link">Membership
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item has-mega" data-mega="events">
+            <a href="#" class="nav-link">Events
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item has-mega" data-mega="clinical">
+            <a href="#" class="nav-link">Clinical Practice
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item has-mega" data-mega="library">
+            <a href="#" class="nav-link">Scientific Library
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item has-mega" data-mega="international">
+            <a href="#" class="nav-link">International Activities
+              <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a href="blog.html" class="nav-link">News</a>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </div>
         </nav>
+
         <div class="header-actions">
-          <button class="btn-search" id="btnSearch" aria-label="Search"><i class="bi bi-search"></i></button>
+          <button class="btn-search" id="btnSearch" aria-label="Search">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <div class="header-divider"></div>
           <a href="login.html" class="btn-login">Login</a>
-          <a href="#" class="btn-join">Join ESCi</a>
-          <button class="btn-hamburger" id="btnHamburger" aria-label="Open menu"><i class="bi bi-list"></i></button>
+          <a href="register.html" class="btn-join">Join ESCi</a>
+          <button class="btn-hamburger" id="btnHamburger" aria-label="Open menu">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Nav -->
+  <!-- MEGA MENU PANEL -->
+  <div class="mega-menu-panel" id="megaMenuPanel">
+    <div class="mega-menu-arrow" id="megaMenuArrow" aria-hidden="true"></div>
+    <div class="container-fluid px-esci">
+      <div class="mega-menu-box">
+
+      <!-- About ESCi -->
+      <div class="mega-menu-content" data-mega="about">
+        <div class="mega-menu-grid mega-menu-grid--full">
+          <div class="mega-col">
+            <div class="mega-col-title">About ESCi</div>
+            <ul>
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">Our Vision &amp; Mission</a></li>
+              <li><a href="#">Board of Directors</a></li>
+              <li><a href="#">Committees</a></li>
+              <li><a href="#">Bylaws &amp; Governance</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Strategic Plan</a></li>
+              <li><a href="#">ESCi in Numbers</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Membership</div>
+            <ul>
+              <li><a href="#">Membership Types</a></li>
+              <li><a href="#">Membership Benefits</a></li>
+              <li><a href="#">How to Apply</a></li>
+              <li><a href="#">Membership Fees</a></li>
+              <li><a href="#">Renew Membership</a></li>
+              <li><a href="#">Member Directory</a></li>
+              <li><a href="#">Membership FAQs</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Events</div>
+            <ul>
+              <li><a href="#">Upcoming Events</a></li>
+              <li><a href="#">Annual Conference</a></li>
+              <li><a href="#">Workshops &amp; Courses</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Past Events</a></li>
+              <li><a href="#">Event Calendar</a></li>
+              <li><a href="#">Event Gallery</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Resources</div>
+            <ul>
+              <li><a href="#">Scientific Library</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Clinical Cases</a></li>
+              <li><a href="#">Videos &amp; Recordings</a></li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">CME Portal</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Community</div>
+            <ul>
+              <li><a href="#">Forums</a></li>
+              <li><a href="#">Discussion Groups</a></li>
+              <li><a href="#">Young Cardiologists</a></li>
+              <li><a href="#">Women in Intervention</a></li>
+            </ul>
+          </div>
+          <div class="mega-featured-card">
+            <h4>ESCi Annual Conference 2025</h4>
+            <div class="date">
+              <svg class="icon-sm" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              May 24–26, 2025
+            </div>
+            <div class="location">Cairo, Egypt</div>
+            <a href="#" class="btn-esci btn-esci-red btn-esci-sm">Register Now</a>
+            <img src="assets/images/cairo-skyline.svg" alt="" class="mega-featured-skyline" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+
+      <!-- Membership -->
+      <div class="mega-menu-content" data-mega="membership">
+        <div class="mega-menu-grid mega-menu-grid--3">
+          <div class="mega-col">
+            <div class="mega-col-title">Join ESCi</div>
+            <ul>
+              <li><a href="#">Membership Types</a></li>
+              <li><a href="#">Membership Benefits</a></li>
+              <li><a href="#">How to Apply</a></li>
+              <li><a href="#">Membership Fees</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Members</div>
+            <ul>
+              <li><a href="register.html">Become a Member</a></li>
+              <li><a href="#">Renew Membership</a></li>
+              <li><a href="#">Member Directory</a></li>
+              <li><a href="#">Membership FAQs</a></li>
+            </ul>
+          </div>
+          <div class="mega-featured">
+            <div class="mega-featured-bg" style="background-image:url('assets/images/conference-bg.jpg')"></div>
+            <div class="mega-featured-content">
+              <h4>Join 2,500+ Interventional Cardiologists</h4>
+              <div class="date">Access education, events, and a national network</div>
+              <a href="register.html" class="btn-esci btn-esci-red btn-esci-sm">Join Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events -->
+      <div class="mega-menu-content" data-mega="events">
+        <div class="mega-menu-grid mega-menu-grid--3">
+          <div class="mega-col">
+            <div class="mega-col-title">Events</div>
+            <ul>
+              <li><a href="#">Upcoming Events</a></li>
+              <li><a href="#">Annual Conference</a></li>
+              <li><a href="#">Workshops &amp; Courses</a></li>
+              <li><a href="#">Webinars</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Archive</div>
+            <ul>
+              <li><a href="#">Past Events</a></li>
+              <li><a href="#">Event Calendar</a></li>
+              <li><a href="#">Event Gallery</a></li>
+            </ul>
+          </div>
+          <div class="mega-featured">
+            <div class="mega-featured-bg" style="background-image:url('assets/images/conference-bg.jpg')"></div>
+            <div class="mega-featured-content">
+              <h4>ESCi Annual Conference 2025</h4>
+              <div class="date">
+                <svg class="icon-sm" viewBox="0 0 24 24" style="stroke:#fff"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 24–26, 2025
+              </div>
+              <div class="location">
+                <svg class="icon-sm" viewBox="0 0 24 24" style="stroke:#fff"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Cairo, Egypt
+              </div>
+              <a href="#" class="btn-esci btn-esci-red btn-esci-sm">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clinical Practice -->
+      <div class="mega-menu-content" data-mega="clinical">
+        <div class="mega-menu-grid mega-menu-grid--3">
+          <div class="mega-col">
+            <div class="mega-col-title">Clinical Practice</div>
+            <ul>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Clinical Cases</a></li>
+              <li><a href="#">Best Practices</a></li>
+              <li><a href="#">Quality Standards</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Resources</div>
+            <ul>
+              <li><a href="#">Webinars &amp; Videos</a></li>
+              <li><a href="#">Toolkits</a></li>
+              <li><a href="#">Patient Education</a></li>
+              <li><a href="#">Registries</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Programs</div>
+            <ul>
+              <li><a href="#">CME Portal</a></li>
+              <li><a href="#">Training Pathways</a></li>
+              <li><a href="#">Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scientific Library -->
+      <div class="mega-menu-content" data-mega="library">
+        <div class="mega-menu-grid mega-menu-grid--3">
+          <div class="mega-col">
+            <div class="mega-col-title">Scientific Library</div>
+            <ul>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Research Papers</a></li>
+              <li><a href="#">ESCi Journal</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Media</div>
+            <ul>
+              <li><a href="#">Videos &amp; Recordings</a></li>
+              <li><a href="#">Presentations</a></li>
+              <li><a href="#">Podcasts</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Learning</div>
+            <ul>
+              <li><a href="#">CME Portal</a></li>
+              <li><a href="#">E-Learning Modules</a></li>
+              <li><a href="#">Case Library</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- International Activities -->
+      <div class="mega-menu-content" data-mega="international">
+        <div class="mega-menu-grid mega-menu-grid--3">
+          <div class="mega-col">
+            <div class="mega-col-title">Global Network</div>
+            <ul>
+              <li><a href="#">International Partners</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Exchange Programs</a></li>
+              <li><a href="#">Global Conferences</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Activities</div>
+            <ul>
+              <li><a href="#">Joint Sessions</a></li>
+              <li><a href="#">Visiting Fellowships</a></li>
+              <li><a href="#">International Guidelines</a></li>
+            </ul>
+          </div>
+          <div class="mega-featured">
+            <div class="mega-featured-bg" style="background-image:url('assets/images/world-map.svg')"></div>
+            <div class="mega-featured-content">
+              <h4>12+ International Partners</h4>
+              <div class="date">Connecting Egyptian cardiologists with the world</div>
+              <a href="#" class="btn-esci btn-esci-red btn-esci-sm">Explore Partners</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div><!-- /.mega-menu-box -->
+    </div>
+  </div>
+  </div><!-- /header-mega-wrap -->
+
+  <!-- MOBILE NAV -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <div class="mobile-nav-header">
-      <img src="assets/images/esci-logo.png" alt="ESCi" class="header-logo-img">
-      <button class="btn-close-nav" id="btnCloseNav">&times;</button>
+      <a href="index.html" class="mobile-nav-brand">
+        <img src="assets/images/esci-logo.png" alt="ESCi" class="mobile-nav-logo">
+      </a>
+      <button class="btn-close-nav" id="btnCloseNav" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
     <div class="mobile-nav-body">
-      <div class="mobile-accordion-item"><a href="index.html" class="mobile-accordion-trigger" style="text-decoration:none;">Home</a></div>
-      <div class="mobile-accordion-item"><a href="blog.html" class="mobile-accordion-trigger" style="text-decoration:none;">News</a></div>
-      <div class="mobile-accordion-item"><a href="login.html" class="mobile-accordion-trigger" style="text-decoration:none;">Login</a></div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">About ESCi <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Our Vision &amp; Mission</a></li>
+            <li><a href="#">Board of Directors</a></li>
+            <li><a href="#">Committees</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">Membership <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">Membership Types</a></li>
+            <li><a href="#">How to Apply</a></li>
+            <li><a href="#">Member Directory</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">Events <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Annual Conference</a></li>
+            <li><a href="#">Workshops &amp; Courses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">Clinical Practice <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Clinical Cases</a></li>
+            <li><a href="#">Webinars &amp; Videos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">Scientific Library <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">CME Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-accordion-item">
+        <button class="mobile-accordion-trigger" type="button">International Activities <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></button>
+        <div class="mobile-accordion-content">
+          <ul>
+            <li><a href="#">International Partners</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Exchange Programs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-nav-link-item">
+        <a href="blog.html" class="mobile-nav-link">News <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></a>
+      </div>
+      <div class="mobile-nav-link-item">
+        <a href="#" class="mobile-nav-link">Contact <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></span></a>
+      </div>
     </div>
     <div class="mobile-nav-footer">
-      <a href="#" class="btn-join-full">Join ESCi</a>
+      <a href="#" class="mobile-nav-utility" id="btnSearchMobile">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </a>
+      <a href="login.html" class="mobile-nav-utility">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Login
+      </a>
+      <a href="register.html" class="btn-join-full">Join ESCi</a>
     </div>
   </nav>
 
-  <!-- Search Overlay -->
+  <!-- SEARCH -->
   <div class="search-overlay" id="searchOverlay">
-    <button class="btn-close-search" id="btnCloseSearch">&times;</button>
+    <button class="btn-close-search" id="btnCloseSearch" aria-label="Close search">&times;</button>
     <div class="search-box">
-      <i class="bi bi-search search-icon"></i>
-      <input type="text" placeholder="Search articles..." aria-label="Search">
+      <svg class="search-icon icon-lg" viewBox="0 0 24 24" style="stroke:rgba(255,255,255)"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Search events, articles, guidelines..." aria-label="Search">
     </div>
   </div>
 
@@ -204,11 +569,84 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="container-fluid px-esci">
-      <div class="footer-bottom" style="border-top:none;">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <div class="footer-brand-row">
+            <img src="assets/images/esci-heart-icon.png" alt="" class="footer-heart-icon" aria-hidden="true">
+            <div class="footer-brand-copy">
+              <div class="footer-brand-title">ESCi</div>
+              <div class="footer-brand-subtitle">
+                <span>Egyptian Society</span>
+                <span>of Cardiovascular Intervention</span>
+              </div>
+              <div class="footer-brand-tagline">— PRECISION IN EVERY INTERVENTION —</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">About ESCi</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Clinical Practice</a></li>
+            <li><a href="blog.html">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">Scientific Library</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">CME Portal</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Photo Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="assets/images/icons/social-facebook.svg" alt="">
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <img src="assets/images/icons/social-linkedin.svg" alt="">
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <img src="assets/images/icons/social-youtube.svg" alt="">
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <img src="assets/images/icons/social-twitter.svg" alt="">
+            </a>
+          </div>
+          <div class="contact-info">
+            <p>
+              <img src="assets/images/icons/footer-phone.svg" alt="" class="contact-icon" aria-hidden="true">
+              +20 123 456 7890
+            </p>
+            <p>
+              <img src="assets/images/icons/footer-email.svg" alt="" class="contact-icon" aria-hidden="true">
+              info@esci-eg.org
+            </p>
+            <p>
+              <img src="assets/images/icons/footer-globe.svg" alt="" class="contact-icon" aria-hidden="true">
+              www.esci-eg.org
+            </p>
+          </div>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h5>Stay Updated</h5>
+          <p class="newsletter-desc">Subscribe to our newsletter</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2025 Egyptian Society of Cardiovascular Intervention (ESCi). All rights reserved.</p>
       </div>
     </div>

@@ -215,14 +215,155 @@
     }
   }
 
+  /* ---- Dialog helpers (Fancybox) ---- */
+  function esciDialog(html) {
+    if (typeof Fancybox === 'undefined') {
+      alert($('<div>').html(html).text());
+      return;
+    }
+    Fancybox.show([{ src: '<div class="esci-dialog">' + html + '</div>', type: 'html' }], {
+      dragToClose: false,
+      closeButton: 'inside',
+      autoFocus: false
+    });
+  }
+
+  function esciMemberGate(resource) {
+    var label = resource || 'this resource';
+    esciDialog(
+      '<div class="esci-dialog-icon"><i class="fa-solid fa-lock"></i></div>' +
+      '<h3>Members only</h3>' +
+      '<p>Sign in to access <strong>' + $('<span>').text(label).html() + '</strong>. Full recordings, cases, journal issues, and CME credits are reserved for ESCi members.</p>' +
+      '<div class="esci-dialog-actions">' +
+      '<a href="login.html" class="btn-esci btn-esci-red">Login</a>' +
+      '<a href="register.html" class="btn-esci btn-esci-outline-red">Join ESCi</a>' +
+      '</div>'
+    );
+  }
+
+  function esciSuccess(msg) {
+    esciDialog(
+      '<div class="esci-dialog-icon is-ok"><i class="fa-solid fa-check"></i></div>' +
+      '<h3>Request received</h3>' +
+      '<p>' + $('<span>').text(msg).html() + '</p>'
+    );
+  }
+
+  function esciDocPreview(title, body) {
+    esciDialog(
+      '<div class="esci-dialog-icon"><i class="fa-solid fa-file-lines"></i></div>' +
+      '<h3>' + $('<span>').text(title).html() + '</h3>' +
+      '<p>' + $('<span>').text(body).html() + '</p>' +
+      '<p class="esci-dialog-note">The official PDF will be available from the Secretariat. This preview is a placeholder.</p>'
+    );
+  }
+
   /* ---- Newsletter ---- */
   $('#newsletterForm').on('submit', function (e) {
     e.preventDefault();
     var email = $(this).find('input[type="email"]').val();
     if (email) {
-      alert('Thank you for subscribing! You will receive ESCi updates at ' + email);
+      esciSuccess('Thank you for subscribing. ESCi updates will be sent to ' + email + '.');
       this.reset();
     }
   });
+
+  /* ---- Society process forms ---- */
+  $(document).on('submit', '.js-process-form', function (e) {
+    e.preventDefault();
+    var msg = $(this).data('success') || 'Your request has been received by the ESCi Secretariat.';
+    esciSuccess(msg);
+    this.reset();
+  });
+
+  $(document).on('click', '.js-member-gate', function (e) {
+    e.preventDefault();
+    esciMemberGate($(this).data('resource'));
+  });
+
+  $(document).on('click', '.js-doc-preview', function (e) {
+    e.preventDefault();
+    esciDocPreview($(this).data('title') || 'Document', $(this).data('body') || '');
+  });
+
+  $(document).on('click', '.js-article-preview', function (e) {
+    e.preventDefault();
+    var title = $(this).data('title') || 'Article';
+    var body = $(this).data('body') || '';
+    esciDialog(
+      '<h3>' + $('<span>').text(title).html() + '</h3>' +
+      '<p>' + $('<span>').text(body).html() + '</p>' +
+      '<p class="esci-dialog-note">Full article pages will be connected when the CMS is live.</p>'
+    );
+  });
+
+  $(document).on('click', '.js-play-video', function (e) {
+    e.preventDefault();
+    var $thumb = $(this).closest('.video-card, .patient-video-card').find('a[data-fancybox]').not(this).first();
+    if ($thumb.length) {
+      $thumb[0].click();
+      return;
+    }
+    if (typeof Fancybox !== 'undefined' && this.href) {
+      Fancybox.show([{ src: this.href }]);
+    }
+  });
+
+  function filterDirectory() {
+    var q = ($('#dirSearch').val() || '').toLowerCase();
+    var city = ($('#dirCity').val() || '').toLowerCase();
+    var spec = ($('#dirSpec').val() || '').toLowerCase();
+    $('#directoryTable tbody tr').each(function () {
+      var text = $(this).text().toLowerCase();
+      var show = text.indexOf(q) !== -1 && (!city || text.indexOf(city) !== -1) && (!spec || text.indexOf(spec) !== -1);
+      $(this).toggle(show);
+    });
+  }
+  $('#dirSearch, #dirCity, #dirSpec').on('input change', filterDirectory);
+
+  function filterResources() {
+    var q = ($('#resSearch').val() || '').toLowerCase();
+    var cat = ($('#resCat').val() || '').toLowerCase();
+    $('.resource-item').each(function () {
+      var text = $(this).text().toLowerCase();
+      var itemCat = ($(this).data('cat') || '').toLowerCase();
+      $(this).toggle(text.indexOf(q) !== -1 && (!cat || itemCat === cat));
+    });
+  }
+  $('#resSearch, #resCat').on('input change', filterResources);
+
+  /* ---- Fancybox: gallery, video, inline ---- */
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', {
+      idle: false,
+      compact: false,
+      animated: true,
+      dragToClose: false,
+      Thumbs: false
+    });
+  }
+
+  /* ---- FullCalendar ---- */
+  var calEl = document.getElementById('esciCalendar');
+  if (calEl && typeof FullCalendar !== 'undefined') {
+    var calendar = new FullCalendar.Calendar(calEl, {
+      initialView: 'dayGridMonth',
+      initialDate: '2025-05-01',
+      height: 'auto',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,listMonth'
+      },
+      buttonText: { today: 'Today', month: 'Month', list: 'List' },
+      events: [
+        { title: 'ESCi Annual Conference', start: '2025-05-24', end: '2025-05-27', url: 'conference.html', color: '#E31E24' },
+        { title: 'CHIP / CTO Workshop', start: '2025-06-14', url: 'workshops.html', color: '#001A3D' },
+        { title: 'Radial Access Course', start: '2025-07-05', url: 'workshops.html', color: '#001A3D' },
+        { title: 'ESCi–EuroPCR Webinar', start: '2025-09-20', url: 'webinars.html', color: '#E31E24' }
+      ]
+    });
+    calendar.render();
+  }
 
 })(jQuery);
